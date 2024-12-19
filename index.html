@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Profile của Huang</title>
+    <style>
+        .profile-container {
+            border-style: groove;
+            border-radius: 10px;
+            padding: 5px;
+            margin: 10px;
+            background-color: rgb(187, 219, 235);
+            width: 800px;
+            height: 220px;
+        }
+
+        .profile-avatar {
+            border-radius: 100px;
+            border: 5px solid rgb(102, 160, 226);
+            width: 150px;
+            margin: 25px 15px;
+        }
+
+        .name-property {
+            font-weight: bold;
+            font-size: larger;
+            color: rgb(19, 108, 224);
+        }
+
+        #name {
+            font-weight: bold;
+            font-size: larger;
+            color: rgb(19, 108, 224);
+        }
+
+        body {
+            background-color: aliceblue;
+        }
+
+        .profile-container {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 0px;
+        }
+
+        .profile-content {
+            flex: 1;
+            min-width: 100px;
+            padding: 10px;
+            text-align: left;
+            line-height: 2;
+        }
+
+        .profile-property-title {
+            font-weight: bold;
+        }
+
+        .profile-property-value {
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="profile-container">
+        <img class="profile-avatar" src="images/anhcuahoang.jpg" alt="Huangneeee">
+        <div class="profile-content">
+            <div>
+                <span class="name-property">Họ tên:</span>
+                <span id="name" class="profile-property-value"></span>
+            </div>
+            <div>
+                <span class="profile-property-title">Tuổi:</span>
+                <span id="age" class="profile-property-value"></span>
+            </div>
+            <div>
+                <span class="profile-property-title">Là sinh viên:</span>
+                <span id="IsAStudent" class="profile-property-value"></span>
+            </div>
+            <div>
+                <span class="profile-property-title">Sở thích:</span>
+                <span id="hobbies" class="profile-property-value"></span>
+            </div>
+            <div>
+                <span class="profile-property-title">Địa chỉ:</span>
+                <span id="address" class="profile-property-value"></span>
+            </div>
+            <div>
+                <span class="profile-property-title">Điểm trung bình:</span>
+                <span id="avgScore" class="profile-property-value"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        let hoTen = "Hồ Thị Như Hoàng";
+        let tuoi = 23;
+        let coLaSinhVien = false;
+        if (coLaSinhVien == true) {
+            coLaSinhVien = "Có";
+        } else {
+            coLaSinhVien = "Không";
+        }
+        const soThich = ["nghe nhạc", " ngắm hoàng hôn", " chụp ảnh"];
+        const diaChi = {
+            tinhThanh: "Thừa Thiên Huế",
+            quanHuyen: "Thành Phố Huế"
+        };
+
+
+        let diemTrungBinh = 6.66;
+
+        document.getElementById("name").innerHTML = `${hoTen}`;
+        document.getElementById("age").innerHTML = `${tuoi}`;
+        document.getElementById("IsAStudent").innerHTML = `${coLaSinhVien}`;
+        document.getElementById("hobbies").innerHTML = `${soThich}`;
+        document.getElementById("address").innerHTML = `${diaChi.tinhThanh}, ${diaChi.quanHuyen}`;
+        document.getElementById("avgScore").innerHTML = `${diemTrungBinh}`;
+
+        const vi = {
+            age: "Tuổi",
+            quanHuyen: "Thành Phố Huế"
+        };
+        const ja = {
+            age: "Sai",
+            quanHuyen: "Thành Phố Huế"
+        };
+    </script>
+</body>
+
+</html>
